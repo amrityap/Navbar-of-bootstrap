@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Navigation Bar</title>
+	 <!--Stylesheets-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="navbar">
+	<button id="entry-id" class="entry-class">Open Menu Here </button >
+  <div class="listinnav listinsidenav">
+    <div class="listelements">
+      <button class="listelements_1 element1" href="#">HOME</button>
+    </div>
+    <div class="listelements">
+      <button class="listelements_1 element2" href="#">About us</button>
+    </div>
+    <div class="listelements">
+      <button class="listelements_1 element3" href="#">Settings</button>
+    </div>
+    <div class="listelements">
+      <button class="listelements_1 element4" href="#">Contact us</button>
+    </div>
+  </div>
+
+
+</div>
+
+ <script src="jquery-3.3.1.min.js"></script>
+
+    <script src="index.js"></script>
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+     let   a = $('.listinsidenav');
+
+        $("#entry-id").click(function(e){
+
+        	e.preventDefault();
+$(".listinsidenav").slideToggle();
+
+        });
+
+        $(window).resize(function(){
+        let p = $(this).width();
+
+        if(p > 991 && a.is(':hidden')){
+	    a.removeAttr('style');
+          }
+
+        if(p>991){
+	    a.removeAttr('style');
+                 }
+                                    })
+                                    })
+    </script>
+</body>
+</html>
